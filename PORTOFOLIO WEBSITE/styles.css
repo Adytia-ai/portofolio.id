@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: #000;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000;
+  width: 100%;
+  height: 30px;
+  padding: 2rem;
+  box-shadow: 0 0 20px aqua;
+  border-radius: 10px;
+}
+
+.burger-menu {
+  cursor: pointer;
+  display: none; /* Default hidden, only visible in mobile */
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger-menu .line {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+.navbar h2 {
+  color: white;
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  margin: 20px;
+  font-size: 25px;
+  height: 80vh;
+  padding: 10px;
+}
+
+.container1 div {
+  color: white;
+}
+
+.container1 strong {
+  color: aqua;
+}
+
+.container1 button {
+  background-color: aqua;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  margin: 20px auto;
+  transition: ease-in-out 0.2s;
+}
+
+.container1 button:hover {
+  transform: scale(1.05);
+}
+
+.container1 img {
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #03a5d6;
+  border: 2px solid white;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #000;
+  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  height: 50vh;
+}
+
+.container2 div {
+  color: white;
+  font-size: 20px;
+}
+
+.container2 h2 {
+  color: aqua;
+  margin: 10px;
+}
+
+.gallery1 h2 {
+  text-align: center;
+  color: aqua;
+  margin: 40px;
+}
+
+.gallery2 {
+  width: 70%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.gallery2 img {
+  width: 10%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255);
+  transition: all ease-in-out 0.5s;
+}
+
+.gallery2 img:hover {
+  width: 25%;
+}
+
+.contact {
+  color: white;
+  padding: 100px 0;
+  background-color: #000;
+  text-align: center;
+}
+
+.contact h2 {
+  color: aqua;
+}
+
+.contact-me {
+  margin-bottom: 30px;
+}
+
+.contact img {
+  width: 7%;
+  height: auto;
+  border-radius: 20%;
+  margin: 10px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.contact img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 10px rgba(0, 255, 255, 0.8);
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    font-size: 10px;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .container1 {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .container1 img {
+    max-width: 60%;
+    margin: 15px;
+  }
+
+  .container1 button {
+    width: 90%;
+    font-size: 10px;
+  }
+
+  .container2 div {
+    font-size: 10px;
+    height: auto;
+  }
+
+  .gallery1 {
+    margin-bottom: 10px; /* Kurangi jarak bawah galeri */
+  }
+
+  .gallery2 {
+    margin-bottom: 10px; /* Kurangi jarak bawah galeri kedua */
+  }
+
+  .gallery1 h2 {
+    margin: 20px;
+    font-size: 15px;
+  }
+
+  .gallery2 img {
+    width: 13%;
+    height: 70%;
+  }
+
+  .gallery2 img:hover {
+    width: 50%;
+  }
+
+  .contact {
+    font-size: 10px;
+    padding-top: 50px;
+  }
+
+  .contact img {
+    width: 13%;
+  }
+}
